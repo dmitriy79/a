@@ -96,7 +96,7 @@ module.exports = function(logger){
 
 
     //If an html file was changed reload it
-    watch('website', function(filename){
+    watch(['./website', './website/pages'], function(evt, filename){
         var basename = path.basename(filename);
         if (basename in pageFiles){
             console.log(filename);
